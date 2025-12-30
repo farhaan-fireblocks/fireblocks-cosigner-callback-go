@@ -3,7 +3,11 @@
 This guide explains how to implement a callback handler for Fireblocks Customer Co-signers using Go. Communication is secured via [public key authentication](https://developers.fireblocks.com/reference/cosigner-callbackhandler-secure-communication-authentication#option-1-public-key-authentication).
 
 ## Prerequisites
-Before running the callback handler, please complete the following steps:
+Before running the callback handler, complete the following steps:
+
+### Make sure you have Go installed 
+
+Full guide here: [https://go.dev/doc/install](https://go.dev/doc/install)
 
 ### 1) Generate a Key Pair for your callback handler.
 
@@ -23,7 +27,7 @@ Reference to Fireblocks documentation: [https://developers.fireblocks.com/refere
 ### 2) Retrieve the Co-signer Public Key
 
 You must retrieve the public key from your Co-signer VM. Refer to the specific guide for your cloud provider:
-- [AWS Nitro Enclaves]([https://developers.fireblocks.com/reference/api-cosigner-maintenance-aws-nitro](https://developers.fireblocks.com/reference/api-cosigner-maintenance-aws-nitro#retrieve-the-public-key))
+- [AWS Nitro Enclave](https://developers.fireblocks.com/reference/api-cosigner-maintenance-aws-nitro#retrieve-the-public-key)
 - [Azure SGX](https://developers.fireblocks.com/reference/api-cosigner-maintenance-sgx#retrieve-the-public-key)
 - [GCP Confidential Space](https://developers.fireblocks.com/reference/api-cosigner-maintenance-gcp-confspace#retrieve-the-public-key)
 
@@ -35,5 +39,6 @@ For local development, you can use a tunneling service or gateway of your choice
 
 
 At the end of the setup process, you should have the following three files: callback_private.pem, callback_public.pem, and cosigner_public.pem.
+
 
 
